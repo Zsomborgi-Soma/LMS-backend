@@ -1,0 +1,55 @@
+[
+{
+    "testName": "Valid login",
+    "username" : "johndoe",
+    "password" : "password123",
+    "expectedStatus": 200
+},
+{
+    "testName": "Invalid login",
+    "username" : "johndo",
+    "password" : "password123",
+    "expectedStatus": 400
+    
+},
+{
+    "testName": "SQL injection attempt",
+    "username" : "' OR '1'='1",
+    "password" : "password123",
+    "expectedStatus": 400
+    
+},
+{
+    "testName": "XSS attack attempt",
+    "username" : "<script>alert('XSS')</script>",
+    "password" : "password123",
+    "expectedStatus": 400
+    
+},
+{
+    "testName": "Empty username and password",
+    "username" : "",
+    "password" : "",
+    "expectedStatus": 400
+    
+},
+{
+    "testName": "Invalid login with special characters",
+    "username" : "!@#$%^&*()_+",
+    "password" : "!@#$%^&*()_+",
+    "expectedStatus": 400
+    
+},
+{
+    "testName": "Valid login",
+    "username" : "admin",
+    "password" : "adminpassword",
+    "expectedStatus": 200
+},
+{
+    "testName": "Valid login",
+    "username" : " johndoe ",
+    "password" : " password123 ",
+    "expectedStatus": 200
+}
+]

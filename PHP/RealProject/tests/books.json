@@ -1,0 +1,27 @@
+[
+{
+    "values" : "",
+    "expectedStatus": 200
+},
+{
+    "values" : "title/1984",
+    "expectedStatus": 200,
+    "length" : 1
+},
+{
+    "values" : "category/Fiction",
+    "expectedStatus": 200
+},
+{
+    "values" : "author/George Orwell",
+    "expectedStatus": 200
+},
+{
+    "values" : "ISBN/a",
+    "expectedStatus": 400
+},
+{
+    "values" : "ISBN/xdmivanmár",
+    "expectedStatus": 400
+}
+]

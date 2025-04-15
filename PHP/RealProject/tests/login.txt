@@ -1,0 +1,11 @@
+[
+{
+    "username" : "{{username}}",
+    "password" : "{{password}}",
+    "passwordAgain" : "{{passwordAgain}}",
+    "firstname" : "{{firstname}}",
+    "lastname" : "{{lastname}}",
+    "email" : "{{email}}",
+    "address" : "{{address}}"
+}
+]
