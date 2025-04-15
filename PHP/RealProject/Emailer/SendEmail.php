@@ -17,18 +17,19 @@ namespace Emailer;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use ApiResponse\Response;
+use Config\Env;
 
 class SendEmail{
 public static function sendEmail($sendToElmail,$sendToName,$subject,$body){
     $mail = new PHPMailer(true);
-
+    Env::load(); 
     try {
         #Server settings
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'librarymanagementsystem.emailer@gmail.com';
-        $mail->Password = 'cfjncbaukrqfvtzb'; 
+        $mail->Password = $_ENV['EMAIL_PASSWORD']; 
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
         $mail->Port = 587;
 
