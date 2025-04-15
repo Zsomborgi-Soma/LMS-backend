@@ -1,3 +1,3 @@
 # LMS-backend
 
-Dokumentáció
+Olvass el Backend Dokumentáció.docx
